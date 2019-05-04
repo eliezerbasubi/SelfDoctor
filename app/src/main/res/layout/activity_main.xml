@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:layout_centerVertical="true"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/doctor_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="160dp"
+        android:src="@drawable/doctor"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:id="@+id/take"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="185dp"
+        android:text="Take possible care for yourself with Self Doctor \n        You can treat yourself without a doctor"
+        android:textStyle="normal"
+        android:textSize="16dp"
+        android:textColor="@color/colorBlack"
+        android:inputType="textMultiLine"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/take"
+        android:layout_centerHorizontal="true"
+        android:inputType="textMultiLine"
+        android:text="Build trust in what you see."
+        android:textColor="@color/colorBlack"
+        android:textSize="16dp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="217dp"
+        android:text="Self Doctor"
+        android:textColor="@color/colorBlack"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:typeface="serif" />
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="143dp"
+        android:text="get started"
+        android:textColor="@color/colorWhite"
+        android:textStyle="normal"
+        android:textSize="18dp"
+        android:padding="5dp"
+        android:background="@drawable/rounded_button_layout"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="107dp"
+        android:text="Register"
+        android:textSize="19dp"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Base.ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:fitsSystemWindows="true">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_details"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:title="@string/app_name"
+                app:layout_collapseMode="pin"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nested"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:layout_below="@id/app_bar_details"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardElevation="8dp"
+            app:cardUseCompatPadding="true"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/overview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="28dp"
+                    android:text="Description"
+                    android:typeface="serif"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="28dp"
+                    android:padding="10dp"/>
+
+                <View
+                    android:id="@+id/viewDesc"
+                    android:layout_width="124dp"
+                    android:layout_height="2dp"
+                    android:background="@color/colorBlack"
+                    android:layout_below="@id/overview"
+                    android:layout_marginLeft="40dp"
+                    />
+
+                <TextView
+                    android:id="@+id/description_here"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/overview"
+                    android:text="description of disease here"
+                    android:padding="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:inputType="textMultiLine"
+                    android:autoText="true"/>
+
+                <ImageView
+                    android:id="@+id/image_here"
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:src="@drawable/doctor"
+                    android:layout_below="@id/description_here"/>
+
+                <!--Symptoms layout design here -->
+                <TextView
+                    android:id="@+id/txtsyptoms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Symptoms"
+                    android:typeface="serif"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_below="@id/image_here"
+                    android:layout_marginLeft="28dp"
+                    android:padding="10dp"/>
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="114dp"
+                    android:layout_height="2dp"
+                    android:background="@color/colorBlack"
+                    android:layout_below="@id/txtsyptoms"
+                    android:layout_marginLeft="40dp"
+                    />
+
+                <TextView
+                    android:id="@+id/syptoms_here"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view"
+                    android:text="syptoms go here"
+                    android:padding="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:inputType="textMultiLine"
+                    android:autoText="true"/>
+
+                <TextView
+                    android:id="@+id/txtPrevention"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Prevention"
+                    android:typeface="serif"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_below="@id/syptoms_here"
+                    android:layout_marginLeft="28dp"
+                    android:padding="10dp"/>
+                <View
+                    android:id="@+id/viewPrevention"
+                    android:layout_width="114dp"
+                    android:layout_height="2dp"
+                    android:background="@color/colorBlack"
+                    android:layout_below="@id/txtPrevention"
+                    android:layout_marginLeft="40dp"
+                    />
+
+                <TextView
+                    android:id="@+id/prevention_here"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/viewPrevention"
+                    android:text="syptoms go here"
+                    android:padding="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:inputType="textMultiLine"
+                    android:autoText="true"/>
+
+                <!--cure layout-->
+                <TextView
+                    android:id="@+id/txtCure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cure Options"
+                    android:typeface="serif"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_below="@id/prevention_here"
+                    android:layout_marginLeft="28dp"
+                    android:padding="10dp"/>
+                <View
+                    android:id="@+id/viewCure"
+                    android:layout_width="135dp"
+                    android:layout_height="2dp"
+                    android:background="@color/colorBlack"
+                    android:layout_below="@id/txtCure"
+                    android:layout_marginLeft="40dp"
+                    />
+
+                <TextView
+                    android:id="@+id/cure_here"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/viewCure"
+                    android:text="syptoms go here"
+                    android:padding="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:inputType="textMultiLine"
+                    android:autoText="true"/>
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <!--Bottom sheet layout-->
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/bottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:clipToPadding="true"
+        android:elevation="8dp"
+        app:cardUseCompatPadding="true"
+        app:behavior_hideable ="true"
+        app:behavior_peekHeight = "250dp"
+        app:layout_behavior="@string/bottom_sheet_behavior"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/dialog_img"
+                android:layout_width="180dp"
+                android:layout_height="200dp"
+                android:src="@drawable/doctor"/>
+
+            <ImageView
+                android:id="@+id/close"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_close_black_24dp"
+                android:layout_alignParentRight="true"
+                />
+
+            <TextView
+                android:id="@+id/dialog_txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Eliezer Basubi"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_toEndOf="@id/dialog_img"
+                android:layout_toRightOf="@id/dialog_img"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:id="@+id/dialog_txt_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0705845851"
+                android:textSize="17dp"
+                android:layout_below="@id/dialog_txt_name"
+                android:layout_toEndOf="@id/dialog_img"
+                android:layout_toRightOf="@id/dialog_img"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:id="@+id/dialog_txt_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="eliezer.basubi30@gmail.com"
+                android:textSize="17dp"
+                android:layout_below="@id/dialog_txt_phone"
+                android:layout_toEndOf="@id/dialog_img"
+                android:layout_toRightOf="@id/dialog_img"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:id="@+id/dialog_txt_specialty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dr. In Bone Science at International University Of East Africa. Kampala/Uganda Kansanga Ggaba road"
+                android:textSize="17dp"
+                android:layout_below="@id/dialog_txt_email"
+                android:layout_toEndOf="@id/dialog_img"
+                android:layout_toRightOf="@id/dialog_img"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:maxLength="150"/>
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/bottom_navigation_items"
+        android:layout_gravity="bottom"
+        app:itemTextColor="@color/colorWhite"
+        app:itemIconTint="@color/colorWhite"
+        android:background="@color/colorMaroon"
+        android:layout_marginTop="10dp"
+        app:layout_behavior="com.example.eliezer.selfdoctor.BottomNavigationBehavior"
+        >
+
+    </android.support.design.widget.BottomNavigationView>
+
+</android.support.design.widget.CoordinatorLayout>
